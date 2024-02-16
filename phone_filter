@@ -1,0 +1,10 @@
+import re
+
+list_num = ['9999999999', '999999-999', '99999x9999']
+nums_pattern = r'\b[89]\d{9}'
+
+for index, i_num in enumerate(list_num):
+    if re.match(nums_pattern, i_num):
+        print(f'{index + 1} номер: все в порядке')
+    else:
+        print(f'{index + 1} номер: не подходит')
